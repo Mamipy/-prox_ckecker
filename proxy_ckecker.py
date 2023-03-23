@@ -10,10 +10,10 @@ for proxy in proxy_list:
         response = requests.get('https://www.google.com', proxies={'https': proxy}, timeout=1)
         if response.status_code == 200:
             working_proxies.append(proxy)
-            with open('çalışan_proxyler.txt', 'a') as f:
+            with open('working_proxy.txt', 'a') as f:
                 f.write(proxy + '\n')
 
     except Exception:
         pass
       
-print('Çalışan proxyler:', working_proxies)
+print('Workin proxy: ', working_proxies)
